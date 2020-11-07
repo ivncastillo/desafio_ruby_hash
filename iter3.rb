@@ -1,4 +1,5 @@
-ventas = {
+def filter (valor_filtrar)
+    hash = {
 Enero: 15000,
 Febrero: 22000,
 Marzo: 12000,
@@ -12,10 +13,11 @@ Octubre: 21500,
 Noviembre: 91000,
 Diciembre: 21000
 }
-
-
-ventas.each do |k,v|
-    if v>45000
-        puts v
+    hash_filtrado={}
+    hash.each do |k,v|
+        if v>valor_filtrar
+            hash_filtrado[k]=v
+        end
     end
+    return hash_filtrado
 end
